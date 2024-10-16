@@ -1,0 +1,79 @@
+<body>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./public/stylesheets/style-login-cadastro.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <div class="container">
+        <div class="content first-content">
+            <div class="first-column">
+                <h2 class="title title-primary">Não Possui Uma Conta?</h2>
+                <button class="btn btn-primary"id="signin">Cadastre-se</button>
+            </div>
+            <div class="second-column">
+                <h2 class="title title-second">Entrar</h2>
+                <div class="social-media">
+                    <!-- social media -->
+                    <ul class="list-social-media">
+                        <a class="link-social-media" href="#">
+                            <li class="item-social-media">
+                                <i class="fab fa-google-plus-g"></i>
+                            </li>
+                        </a>
+                    </ul>
+                    <p class="description description-second">ou use seu e-mail:</p>
+                    <form class="form" method="post" action="http://localhost:3000/LoginECadastro/Login">
+                        <label class="label-input" for="">
+                            <i class="fas fa-envelope icon-modify"></i>
+                            <input type="email" placeholder="email" name="login_email">
+                        </label>
+                        <label class="label-input" for="">
+                            <i class="fas fa-lock icon-modify"></i>
+                            <input type="password" placeholder="senha" name="login_senha">
+                        </label>
+                        <a class="password" href="#">esqueceu sua senha? </a>
+                        <button class="btn btn-second" type="submit">Entrar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="content second-content">
+            <div class="first-column">
+                <h2 class="title title-primary">Ja Possui Uma Conta?</h2><button class="btn btn-primary" id="signup">Login!!!</button>
+            </div>
+            <div class="second-column">
+                <h2 class="title title-second">Cadastre-se</h2>
+                <div class="social-media">
+                    <ul class="list-social-media">
+                        <a class="link-social-media" href="#">
+                            <li class="item-social-media">
+                                <i class="fab fa-google-plus-g"></i>
+                            </li>
+                        </a>
+                    </ul>
+                    <p class="description description-second">ou use sua conta de email para cadastro:</p>
+                    <form class="form" method="post" action="http://localhost:3000/LoginECadastro/Cadastro">
+                        <label class="label-input" for="">
+                            <i class="fas fa-user icon-modify"></i>
+                            <input type="text" placeholder="nome" name="nome">
+                        </label>
+                        <label class="label-input" for="">
+                            <i class="fas fa-envelope icon-modify"></i>
+                            <input type="email" placeholder="email"name="email">
+                        </label>
+                        <label class="label-input" for="">
+                            <i class="fas fa-phone icon-modify"></i>
+                            <input type="number" placeholder="celular" name="telefone"></label>
+                            <label class="label-input" for="">
+                                <i class="fas fa-lock icon-modify"></i>
+                                <input type="password" placeholder="senha" name="senha">
+                            </label>
+                            <button class="btn btn-second" type="submit">cadastrar-se</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./public/javascripts/js-login-cadastro.js"></script>
+</body>

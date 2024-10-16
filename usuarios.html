@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./public/stylesheets/paginaHomeUsuarios.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuario</title>
+</head>
+
+<body>
+    <h1>Seja Bem Vindo, #{nome_Usuario}</h1>
+    <section id="sectionHistorias">
+        <h1>Histórias</h1>
+        <div class="containerHistorias">
+            <div class="boxHistorias mais">
+                <a href="http://http://localhost:3000/Usuarios/:${id_Usuario}/NovaHistoria">+</a>
+                <span>Adicionar Historia</span>
+            </div>
+        </div>
+
+        <script>
+            var historias;
+            var sectionHistorias = document.getElementById('sectionHistorias');
+    
+            try {
+                historias = await fetch(`http://localhost:3000/Usuarios/:${idUsuario}/historias`).then(res => res.json());
+    
+                if (historias.length) {
+                    for (var historia of historias) {
+                        sectionHistorias.innerHTML += `
+                        <div class="boxHistorias">
+                            <a href='http://localhost:3000/Usuarios/:${historia.Usuario}/historia/:${historia._id.toString()}' rel="noopener noreferrer">
+                                <h2>${historia.Titulo}</h2>
+                            </a>
+                            <span>
+                                <a href='http://localhost:3000/Usuarios/:${id_Usuario}/adicionarPersonagem'>Deletar Historia</span>
+                            </span>
+                        </div>
+                    `
+                    }
+                }
+    
+            } catch (error) {
+                historias = null
+            }
+        </script>
+    </section>
+
+    <section id="sectionPersonagens">
+        <h1>Personagens</h1>
+        <div class="containerHistorias">
+            <div class="boxHistorias mais">
+                <a href="http://localhost:3000/Usuarios/:${id_Usuario}/adicionarPersonagem">+</a>
+                <span>Adicionar Personagens</span>
+            </div>
+        </div>
+
+        <script>
+            var Personagens;
+            var sectionPersonagens = document.getElementById('sectionPersonagens');
+        
+            try {
+                Personagens = await fetch(`http://localhost:3000/Usuarios/:${idUsuario}/personagens`).then(res => res.json());
+    
+                if (Personagens.length) {
+                    for (var personagem of Personagens) {
+                        sectionPersonagens.innerHTML += `
+                        <div class="boxHistorias">
+                            <a href='http://localhost:3000/Usuarios/:${personagem.Usuario}/personagem/:${personagem._id.toString()}' rel="noopener noreferrer">
+                                <h2>${personagem.Titulo}</h2>
+                            </a>
+                            <span>
+                                <a href='http://localhost:3000/Usuarios/:${id_Usuario}/deletarPersonagem'>Deletar Personagem</span>
+                            </span>
+                        </div>
+                    `
+                    }
+                }
+            } catch (error) {
+                Personagens = null
+            }
+        </script>
+    </section>
+    
+    <section>
+        <h1>Cenários</h1>
+        <div class="containerHistorias">
+            <div class="boxHistorias mais">
+                <a href="#">+</a>
+                <span>Adicionar Cenarios</span>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
