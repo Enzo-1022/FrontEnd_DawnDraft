@@ -1,0 +1,152 @@
+<html lang="pt-br">
+
+<head>
+    <title>home</title>
+    <link rel="stylesheet" href="/stylesheets/paginaCapitulos.css">
+</head>
+
+<body>
+    <h1> 
+        <a href="http://localhost:3000/Usuarios/:670c20d7eb953df72506f2ed/historia/:670edf9ebf544e7a25476daf">Voltar Para A Historia</a>
+    </h1>
+    <form action="" method="post">
+        <h2>Continue escrevendo seu capitulo</h2><input type="text" name="tituloCapitulo" placeholder="Titulo do capitulo" value=`${tituloCapitulo}` maxlength="100">
+        <textarea name="textoCapitulo" placeholder="Historia do capitulo">${txtCapitulo}</textarea>
+        <button type="submit"> Salvar </button>
+    </form>
+
+    <br>
+
+    <h2>Anotações</h2>
+    
+    <script>
+        () => {
+            return (`
+                <form class="formAnotacoes" action="http://localhost:3000/Usuarios/:${idUsuario}/historia/:${idHistoria}/capitulo/:${idCapitulo}/adicionarFocoAoCapitulo" method="post">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Foco Do Cápitulo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="tdConteudoTabela">
+                                    <p>A meta do menor é ser matador de jack</p>
+                                    <div class="spansAttExcluir"> 
+                                        <span> 
+                                            <a class="aExcluirAtt" href="http://localhost:3000/Usuarios/:${idUsuario}/historia/:{idHistoria}/capitulo/:${idCapitulo}/excluirFocoDoCapitulo/:${idFocoCapitulo}">Deletar</a>
+                                        </span>
+                                        <span>
+                                            <a class="aExcluirAtt" href="http://localhost:3000/Usuarios/:${idUsuario}/historia/:{idHistoria}/capitulo/:${idCapitulo}/atualizarFocoCapitulo/:${idFocoCapitulo}">Atualizar</a>
+                                        </span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td> <input class="iptnTable" type="text" name="focoCapitulo" maxlength="100"></td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td><button type="submit">Salvar</button></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </form>
+                <form action="http://localhost:3000/Usuarios/:${idUsuario}/historia/:${idHistoria}/capitulo/:${idCapitulo}/adicionarHumor" method="post">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Humor / Tom </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="tdConteudoTabela">
+                                    <p>Tensão</p>
+                                    <div class="spansAttExcluir">
+                                        <span> 
+                                            <a href="http://localhost:3000/Usuarios/:${idUsuario}/historia/:${idHistoria}/capitulo/:${idCapitulo}/excluirHumorDoCapitulo/:${idHumorCapitulo}">Deletar</a>
+                                        </span>
+                                        <span>
+                                            <a href="http://localhost:3000/Usuarios/:${idUsuario}/historia/:${idHistoria}/capitulo/:${idCapitulo}/atualizarHumorDoCapitulo/:${idHumorCapitulo}">Atualizar</a>
+                                        </span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input class="iptnTable" type="text" name="humor" maxlength="100"></td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td> <button type="submit">Salvar Humor / Tom Do Capitulo</button></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </form><br>
+                <form action="http://localhost:3000/Usuarios/:${idUsuario}/historia/:${idHistoria}/capitulo/:${idCapitulo}/adicionarPersonagem" method="post">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Personagens </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <p>
+                                        <a href="http://localhost:3000/Usuarios/:${idUsuario}/personagem/:${idPersonagem}">Matue</a>
+                                            <span>
+                                                <a href="http://localhost:3000/Usuarios/:${idUsuario}/historia/:${idHistoria}/capitulo/:${idCapitulo}/removerPersonagemDoCapitulo/:${idPersonagemDoCapitulo}">Deletar</a>
+                                            </span>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <select name="personagem">
+                                        <option value="0">Escolha um personagem</option>
+                                        <option value="670f1f58c1b662f9301a6d48">Matue</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td><button type="submit">Adicionar Personagem</button></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </form>
+                <br>
+                <form action="http://localhost:3000/Usuarios/:${idUsuario}/historia/:${idHistoria}/capitulo/:${idCapitulo}/adicionaCenario" method="post">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Cenários</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <select name="cenario" disabled="">
+                                        <option value="null">Cenario 1 </option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td> <button type="submit">Adicionar Cenário</button></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </form>
+            `)
+        }
+    </script>
+</body>
+
+</html>

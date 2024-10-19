@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Criar Personagem</title>
+    </head>
+
+    <body>
+        <header>
+            <h1> <a href="javascript:history.back()">Home</a></h1>
+        </header>
+        <section>
+            <script>
+                () => {
+                    return (`
+                        <form action="http://localhost:3000/Usuarios/:${idUsuario}/personagem/:${idPersonagem}" method="post">
+                            <input type="text" name="nome">
+                            <input type="text" name="idade">
+                            <input type="text" name="personalidade">
+                            <input type="text" name="hobies">
+                            <input type="text" name="sonhos">
+                            <input type="text" name="traumas">
+                            <input type="text" name="objetivo">
+                            <input type="text" name="informacoes">
+                            <button type="submit">Salvar</button>
+                        </form>
+                    `)
+                }
+            </script>
+        </section>
+    </body>
+</html>

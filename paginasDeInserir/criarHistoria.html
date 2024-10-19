@@ -1,0 +1,26 @@
+<html lang="pt-br">
+
+<head>
+    <title>Criar Historia</title>
+    <link rel="stylesheet" href="../public/stylesheets/paginaHistorias.css">
+</head>
+
+<body>
+    <header>
+        <h1> <a href="javascript:history.back()">Home</a></h1>
+    </header>
+    <section>
+        <script>
+            () => {
+                return (`
+                    <form action="http://localhost:3000/Usuarios/:${idUsuario}/novaHistoria" method="post"> 
+                        <input type="text" name="titulo" maxlength="100" placeholder="Titulo">
+                        <textarea name="prologo" placeholder="Prologo Do Capitulo" maxlength="400"></textarea>
+                        <button type="submit">salvar</button>
+                    </form>
+                `)
+            }
+        </script> 
+    </section>
+</body>
+</html>

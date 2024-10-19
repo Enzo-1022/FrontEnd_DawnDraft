@@ -1,0 +1,37 @@
+<html lang="pt-br">
+
+<head>
+    <title>home</title>
+    <link rel="stylesheet" href="/stylesheets/paginaHistorias.css">
+</head>
+
+<body>
+    <script>
+        ()  => {
+            return(`
+                <header>
+                    <h1> <a href="http://localhost:3000/Usuarios/:${idUsuario}/">Home</a> </h1>
+                </header>
+                <section>
+                    <form action="http://localhost:3000/Usuarios/:670c20d7eb953df72506f2ed/historia/:670edf9ebf544e7a25476daf" method="post"> 
+                        <input type="text" name="titulo" value="A volta dos que não foram, o inimigo agora é outro!"maxlength="100">
+                        <textarea name="prologo" placeholder="Prologo Do Capitulo" maxlength="400">Uma Historia Um Pouco Tanto Que Ruim.</textarea>
+                        <button type="submit">salvar</button>
+                    </form>
+                </section>
+                <section class="sectionCapitulos">
+                    <h1 class="tituloCapitulos">Capitulos</h1>
+                    <div class="boxCapitulos">
+                        <p class="paragrafoLinksCapitulos">Capitulo:<a class="linkCapitulos" href="http://localhost:3000/Usuarios/:670c20d7eb953df72506f2ed/historia/:670edf9ebf544e7a25476daf/capitulo/:670edfcdbf544e7a25476db0">V De Vilão</a><span class="spanDeletarCap"><a class="linkDeletarCap"
+                                    href="http://localhost:3000/Usuarios/:670c20d7eb953df72506f2ed/historia/:670edf9ebf544e7a25476daf/capitulo/:670edfcdbf544e7a25476db0/deletarCapitulo">Deletar</a></span>
+                        </p>
+                        <h2> 
+                            <a href="http://localhost:3000/Usuarios/:670c20d7eb953df72506f2ed/historia/:670edf9ebf544e7a25476daf/adicionarCapitulo">Adicionar Cápitulo</a>
+                        </h2>
+                    </div>
+                </section>
+            `)
+        }
+    </script>
+</body>
+</html>
