@@ -15,9 +15,10 @@ a::after{
 }
 
 body{
+    width: 100%;
     margin-top: 2%;
-    margin-left: 5%;
     margin-right: 5%;
+    background-color: #fcfbee;
 }
 
 section{
@@ -78,4 +79,45 @@ span{
     border-radius: 10px;
     margin-top: 30px;
     display: none;
+}
+
+.boxTituloLogo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logonav{
+    width: 50px;
+    border-radius: 38px;
+}
+
+header{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: space-between;
+    background: linear-gradient(to bottom, #ff9101, #f8eb59c2);
+    margin: 0%;
+    padding: 20px;
+}
+
+.footer{
+    background-color: #292727da;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer{
+    display: block;
+    unicode-bidi: isolate;
+}
+
+.textoSejaBemVindo{
+    padding-left: 20px;
+    padding-top: 20px;
 }
